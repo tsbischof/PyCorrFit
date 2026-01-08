@@ -175,7 +175,7 @@ def test_pt3_basic():
     assert np.allclose(corr[100], np.array([0.72089, 0.019201608388821567]))
 
 
-#@pytest.mark.xfail(NOAPITOKEN, reason="Restrictions to GitHub API")
+@pytest.mark.xfail(NOAPITOKEN, reason="Restrictions to GitHub API")
 def test_ptu_all_open():
     ext = "ptu"
     files = data_file_dl.get_data_files_ext(ext)
