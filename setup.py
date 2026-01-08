@@ -74,6 +74,7 @@ setup(
         "numpy >= 1.14.2",
         "pyyaml >= 3.12",
         "scipy >= 1.0.1",
+        "ptufile >= 2025.12.12",
         ],
     extras_require = {
     # Graphical User Interface (pip install pycorrfit[GUI])

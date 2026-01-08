@@ -2,6 +2,8 @@ import struct
 import numpy as np
 import csv
 
+from ptufile import PtuFile
+
 
 """FCS Bulk Correlation Software
 
@@ -229,3 +231,11 @@ def pt3import(filepath):
     # f1.close();
 
     return np.array(chanArr), np.array(trueTimeArr), np.array(dTimeArr), Resolution
+
+
+def ptuimport(filepath):
+    ptu = PtuFile(filepath)
+    records = ptu.decode_records()
+
+    records = records[records["channel"] >= 0] # remove all markers
+    return records["channel"], records["time"].astype(np.float64), records["dtime"], float(ptu.global_resolution)

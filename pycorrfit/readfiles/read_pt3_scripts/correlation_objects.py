@@ -73,6 +73,9 @@ class picoObject():
         if self.ext == 'pt3':
             self.subChanArr, self.trueTimeArr, self.dTimeArr, self.resolution = pt3import(
                 self.filepath)
+        elif self.ext == 'ptu':
+            self.subChanArr, self.trueTimeArr, self.dTimeArr, self.resolution = ptuimport(
+                self.filepath)
         if self.ext == 'csv':
             self.subChanArr, self.trueTimeArr, self.dTimeArr, self.resolution = csvimport(
                 self.filepath)

@@ -135,3 +135,6 @@ def openPT3(path, filename=None):
     dictionary["Filename"] = filelist
 
     return dictionary
+
+def openPTU(path, filename=None):
+    openPT3(path, filename)
