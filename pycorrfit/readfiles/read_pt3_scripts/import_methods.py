@@ -253,7 +253,6 @@ def ptuimport(path):
         dtime = np.zeros_like(channel, dtype=np.uint32)
         resolution = ptu.global_resolution
         time = records["time"] * 1e9 * resolution
-        dtime = np.zeros_like(channel, dtype=np.uint32)
 
     return channel, time, dtime, resolution
 
